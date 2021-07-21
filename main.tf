@@ -24,10 +24,6 @@ variable "DEFAULT_REGION" {
   default = "us-east-2"
 }
 
-variable "PUBLIC_KEY" {
-  type = string 
-}
-
 variable "CLUSTER_VPC_SG_ID" {
   type = string 
   
