@@ -3,7 +3,7 @@
 if [ -z "$OCP_NAME" ] || [ -z "$VPC_ID" ] || [ -z "$CLUSTER_VPC_SG_ID" ] || [ -z "$PUBLIC_SUBNET_ID" ]
 then
 echo "Please ensure the following environment variables are set:
-OCP_NAME - The cluster name or customer name needs to be unique
+OCP_NAME - Unique name to identify server, should match the cluster name or customer name
 VPC_ID - The vpc id of the Openshift cluster your are wanting to connect to
 CLUSTER_VPC_SG_ID - The DEFAULT vpc security group id of the Opendshift cluster you are wanitng to connect to
 PUBLIC_SUBNET_ID - The public subnet id of the Openshift cluster you are wanting to connect to"
@@ -14,8 +14,8 @@ while getopts ":idh" opt; do
   case ${opt} in 
     h ) echo "Usage: 
         [-h] help 
-        [-i] install bastion server that can connect to Openshift cluster 
-        [-d] delete bastion server"
+        [-i] Install bastion server that can connect to Openshift cluster 
+        [-d] Delete bastion server"
       ;;
     i ) install="true"
       ;;
